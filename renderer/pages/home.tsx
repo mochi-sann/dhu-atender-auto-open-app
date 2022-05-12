@@ -1,8 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { shell } from "electron";
 
-function Home():React.FC {
+function Home() {
   return (
     <React.Fragment>
       <Head>
@@ -14,7 +15,17 @@ function Home():React.FC {
           <Link href="/next">
             <a>Go to next page</a>
           </Link>
-          <button onClick={() => console.log("ボタン押した")}> 開く</button>
+          <button
+            onClick={() => {
+              console.log("ボタン押した");
+              shell.openExternal(
+                "https://portal.dhw.ac.jp/uprx/up/pk/pky501/Pky50101.xhtml"
+              );
+            }}
+          >
+            {" "}
+            開く
+          </button>
         </p>
         <img src="/images/logo.png" />
       </div>
