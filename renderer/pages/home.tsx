@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import { shell } from "electron";
+import ClassRoomTables from "../component/classroomTable";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
 
 function Home() {
   return (
@@ -9,25 +9,24 @@ function Home() {
       <Head>
         <title>Home - Nextron (with-typescript)</title>
       </Head>
+
       <div>
-        <p>
-          ⚡ Electron + Next.js ⚡ -
-          <Link href="/next">
-            <a>Go to next page</a>
-          </Link>
-          <button
-            onClick={() => {
-              console.log("ボタン押した");
-              shell.openExternal(
-                "https://portal.dhw.ac.jp/uprx/up/pk/pky501/Pky50101.xhtml"
-              );
-            }}
-          >
-            {" "}
-            開く
-          </button>
-        </p>
-        <img src="/images/logo.png" />
+        <Container>
+        <Text>
+          <Text>てきすと</Text>
+          <p>てきすと</p>
+          <p>auto saveするのだーーーーーーーー</p>
+
+          <p>テキスト</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+          <p>テキストを保存するんやで</p>
+          <Box>
+            <Heading>いい感じの御台s</Heading>
+          </Box>
+          <Text>てきすと</Text>
+          <ClassRoomTables />
+        </Container>
       </div>
     </React.Fragment>
   );
